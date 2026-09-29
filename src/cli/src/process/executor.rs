@@ -6,13 +6,13 @@ use bytes::Bytes;
 use tokio::sync::RwLock;
 use tracing::{debug, error};
 
+use wasmq::proto::job::{Job, JobResult};
+use wasmq::proto::task::TaskIdentifier;
 use wasmq_executor::Executor;
 use wasmq_ipc::channel::IpcServer;
 use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 use wasmq_ipc::transport::Transport;
 use wasmq_repository::TaskRepository;
-use wasmq::proto::job::{Job, JobResult};
-use wasmq::proto::task::TaskIdentifier;
 
 pub struct ExecutorProcess {
     id: usize,
