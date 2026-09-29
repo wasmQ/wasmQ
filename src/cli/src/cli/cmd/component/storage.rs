@@ -5,8 +5,8 @@ use anyhow::{Context, Result};
 use clap::Parser;
 use tracing::debug;
 
-use mate_config::Config;
-use mate_ipc::protocol::ProcessType;
+use wasmq_config::Config;
+use wasmq_ipc::protocol::ProcessType;
 
 use crate::{process::storage::StorageProcess, transport::make_transport};
 

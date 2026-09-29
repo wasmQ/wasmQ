@@ -5,7 +5,7 @@ use anyhow::{Context, Result};
 use clap::Parser;
 use serde_json::Value;
 
-use mate_executor::Executor;
+use wasmq_executor::Executor;
 
 #[derive(Debug, Parser)]
 pub struct TaskRunOpt {

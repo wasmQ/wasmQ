@@ -7,7 +7,7 @@ use self::start::HubStartOpt;
 
 #[derive(Debug, Parser)]
 pub enum HubCmd {
-    /// Starts the `Hub` for Mate
+    /// Starts the `Hub` for wasmq
     Start(HubStartOpt),
 }
 

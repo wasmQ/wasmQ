@@ -1,7 +1,7 @@
 [package]
-name = "{{MATE_TASK_NAME}}"
-authors = ["{{MATE_TASK_AUTHOR}}"]
-version = "{{MATE_TASK_VERSION}}"
+name = "{{WASMQ_TASK_NAME}}"
+authors = ["{{WASMQ_TASK_AUTHOR}}"]
+version = "{{WASMQ_TASK_VERSION}}"
 edition = "2024"
 
 [lib]

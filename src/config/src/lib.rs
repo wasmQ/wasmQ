@@ -53,7 +53,7 @@ mod test {
         let config_toml = r#"
             [transport]
             type = "UnixSocket"
-            base_path = "/tmp/mate_sys"
+            base_path = "/tmp/wasmq_sys"
 
             [hub]
             api_addr = "127.0.0.1:6283"
@@ -78,7 +78,7 @@ mod test {
         assert_eq!(
             config.transport,
             TransportConfig::UnixSocket {
-                base_path: "/tmp/mate_sys".into()
+                base_path: "/tmp/wasmq_sys".into()
             }
         );
     }

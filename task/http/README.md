@@ -1,6 +1,6 @@
 ## HTTP Task Example
 
-This example demonstrates how to use the HTTP task in Mate to perform a POST request
+This example demonstrates how to use the HTTP task in wasmq to perform a POST request
 to a specified API endpoint.
 
 ### Usage

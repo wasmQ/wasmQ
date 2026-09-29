@@ -1,6 +1,6 @@
 [package]
 name = "wasmq-task"
-description = "Macros to define tasks for Mate"
+description = "Macros to define tasks for wasmq"
 edition.workspace = true
 version.workspace = true
 authors.workspace = true

@@ -1,4 +1,4 @@
-//! Mate Client
+//! wasmq Client
 
 pub mod client;
 pub mod proto;

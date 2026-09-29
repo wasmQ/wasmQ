@@ -7,7 +7,7 @@ description.workspace = true
 documentation.workspace = true
 
 [lib]
-name = "mate_scheduler"
+name = "wasmq_scheduler"
 path = "src/lib.rs"
 
 [dependencies]

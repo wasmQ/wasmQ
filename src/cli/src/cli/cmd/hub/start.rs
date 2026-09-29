@@ -3,7 +3,7 @@ use std::{path::PathBuf, sync::Arc};
 
 use anyhow::Result;
 use clap::Parser;
-use mate_repository::TaskRepository;
+use wasmq_repository::TaskRepository;
 use tracing::error;
 
 use crate::process::hub::Hub;
@@ -12,7 +12,7 @@ use crate::utils::shutdown_signal;
 
 #[derive(Debug, Parser)]
 pub struct HubStartOpt {
-    /// Path to a Mate Config file
+    /// Path to a wasmq Config file
     #[clap(long, short)]
     config: PathBuf,
 }

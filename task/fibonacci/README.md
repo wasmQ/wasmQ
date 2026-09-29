@@ -1,6 +1,6 @@
 ## Fibonacci Task Example
 
-This example demonstrates how to use the Fibonacci task in Mate to calculate
+This example demonstrates how to use the Fibonacci task in wasmq to calculate
 the nth Fibonacci number.
 
 ### Usage

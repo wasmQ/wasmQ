@@ -97,9 +97,9 @@ pub fn wasmq_handler(_attr: TokenStream, item: TokenStream) -> TokenStream {
             });
         }
 
-        struct Mate;
+        struct Wasmq;
 
-        impl bindings::Guest for Mate {
+        impl bindings::Guest for Wasmq {
             async fn handler(data: String) -> Result<String, String> {
                 let input: #input_type = serde_json::from_str(&data)
                     .map_err(|e| format!("Failed to deserialize input: {}", e))?;
@@ -114,7 +114,7 @@ pub fn wasmq_handler(_attr: TokenStream, item: TokenStream) -> TokenStream {
             }
         }
 
-        bindings::export!(Mate with_types_in bindings);
+        bindings::export!(Wasmq with_types_in bindings);
 
         #(#fn_attrs)*
         #fn_vis #fn_sig {

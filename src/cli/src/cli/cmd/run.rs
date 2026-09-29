@@ -3,8 +3,8 @@ use std::{process::exit, sync::Arc};
 use anyhow::Result;
 use clap::Parser;
 
-use mate_config::Config;
-use mate_repository::TaskRepository;
+use wasmq_config::Config;
+use wasmq_repository::TaskRepository;
 use tracing::error;
 
 use crate::process::hub::Hub;

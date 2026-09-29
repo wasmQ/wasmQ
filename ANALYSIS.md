@@ -247,9 +247,8 @@ Smaller points in the same code:
 - `ExecutorId` is defined twice (`ipc/protocol.rs:6`, `wasmq/proto/job.rs:12`). `RetrieveJobsQuery` is defined in `client/api/v0/tasks.rs` and never used.
 - The `clap` dependency in `wasmq-executor` is unused.
 
-### 5.2 The rename to `wasmq` is incomplete
-- Library names are still `mate_ipc`, `mate_executor`, `mate_storage`, `mate_scheduler`, `mate_config` and `mate_repository` (`[lib] name` in each `Cargo.toml`).
-- Leftovers also remain in the socket dir `/tmp/mate_sys`, `MATE_SERVER_DEFAULT_PORT`, `let mate_exe`, `struct Mate` in the macro, the "Mate Client" doc, "Mate's Inter Process Communication Protocol", and the "Runs an instance of Mate's Hub" help text.
+### 5.2 The rename to `wasmq` was incomplete (fixed)
+Library names were still `mate_ipc`, `mate_executor`, `mate_storage`, `mate_scheduler`, `mate_config` and `mate_repository` (`[lib] name` in each `Cargo.toml`), and leftovers remained in the socket dir `/tmp/mate_sys`, `MATE_SERVER_DEFAULT_PORT`, `let mate_exe`, `struct Mate` in the macro, the "Mate Client" doc, "Mate's Inter Process Communication Protocol", the "Runs an instance of Mate's Hub" help text, and the task-template placeholders. All of these have since been renamed to `wasmq`.
 
 ### 5.3 IPC design
 - The transport opens a **new Unix-socket connection per message** (connect, write, shutdown). Use persistent connections or a framed stream (for example `tokio_util::codec::LengthDelimitedCodec`).

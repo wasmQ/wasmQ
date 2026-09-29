@@ -7,7 +7,7 @@ description.workspace = true
 documentation.workspace = true
 
 [lib]
-name = "mate_ipc"
+name = "wasmq_ipc"
 path = "src/lib.rs"
 
 [dependencies]

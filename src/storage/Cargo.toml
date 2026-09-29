@@ -7,7 +7,7 @@ description.workspace = true
 documentation.workspace = true
 
 [lib]
-name = "mate_storage"
+name = "wasmq_storage"
 path = "src/lib.rs"
 
 [dependencies]
