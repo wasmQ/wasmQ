@@ -1,6 +1,6 @@
 ## Sum Task Example
 
-This example demonstrates how to use the Sum task in Mate to calculate the sum of
+This example demonstrates how to use the Sum task in wasmq to calculate the sum of
 multiple numbers.
 
 ### Usage

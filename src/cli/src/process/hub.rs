@@ -9,9 +9,9 @@ use tempfile::TempDir;
 use tokio::process::{Child, Command};
 use tracing::debug;
 
-use mate_config::Config;
-use mate_ipc::channel::IpcServer;
-use mate_ipc::protocol::{Message, MessagePayload, ProcessType};
+use wasmq_config::Config;
+use wasmq_ipc::channel::IpcServer;
+use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 
 use crate::transport::make_transport;
 
@@ -53,9 +53,9 @@ impl Hub {
     }
 
     pub async fn spawn_processes(&mut self) -> Result<Vec<Child>> {
-        let mate_exe = current_exe()?;
+        let wasmq_exe = current_exe()?;
         let mut child_processes = Vec::new();
-        let storage = Command::new(&mate_exe)
+        let storage = Command::new(&wasmq_exe)
             .arg("component")
             .arg("storage")
             .arg("--config")
@@ -64,7 +64,7 @@ impl Hub {
 
         child_processes.push(storage);
 
-        let scheduler = Command::new(&mate_exe)
+        let scheduler = Command::new(&wasmq_exe)
             .arg("component")
             .arg("scheduler")
             .arg("--config")
@@ -74,7 +74,7 @@ impl Hub {
         child_processes.push(scheduler);
 
         for i in 0..self.config.executors.count {
-            let executor = Command::new(&mate_exe)
+            let executor = Command::new(&wasmq_exe)
                 .arg("component")
                 .arg("executor")
                 .arg("--config")

@@ -11,7 +11,7 @@ pub enum TransportConfig {
 impl Default for TransportConfig {
     fn default() -> Self {
         Self::UnixSocket {
-            base_path: PathBuf::from("/tmp/mate_sys"),
+            base_path: PathBuf::from("/tmp/wasmq_sys"),
         }
     }
 }

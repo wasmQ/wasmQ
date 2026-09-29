@@ -1,7 +1,7 @@
 use axum::{Extension, Json};
 use serde::Serialize;
 
-use mate_ipc::protocol::{Message, MessagePayload, ProcessType};
+use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 
 use crate::process::hub::IPC_SENDER_HUB;
 use crate::server::api::v0::ApiError;

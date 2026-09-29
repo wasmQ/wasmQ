@@ -18,7 +18,7 @@ pub enum Cmd {
     /// Job management
     #[clap(subcommand)]
     Job(JobCmd),
-    /// Runs an instance of Mate's Hub
+    /// Runs an instance of wasmq's Hub
     Run,
     /// Task management and development
     #[clap(subcommand)]

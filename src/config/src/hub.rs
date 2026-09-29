@@ -2,7 +2,7 @@ use std::net::{Ipv4Addr, SocketAddr, SocketAddrV4};
 
 use serde::{Deserialize, Serialize};
 
-pub const MATE_SERVER_DEFAULT_PORT: u16 = 6283;
+pub const WASMQ_SERVER_DEFAULT_PORT: u16 = 6283;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct HubConfig {
@@ -14,7 +14,7 @@ impl Default for HubConfig {
         Self {
             api_addr: SocketAddr::V4(SocketAddrV4::new(
                 Ipv4Addr::LOCALHOST,
-                MATE_SERVER_DEFAULT_PORT,
+                WASMQ_SERVER_DEFAULT_PORT,
             )),
         }
     }

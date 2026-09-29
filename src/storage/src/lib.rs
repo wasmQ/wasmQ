@@ -5,9 +5,9 @@ use std::sync::Arc;
 
 use anyhow::{Result, bail};
 
-use mate_ipc::channel::IpcServer;
-use mate_ipc::protocol::{Message, MessagePayload, ProcessType};
-use mate_ipc::transport::Transport;
+use wasmq_ipc::channel::IpcServer;
+use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
+use wasmq_ipc::transport::Transport;
 use tracing::error;
 
 use crate::backend::Backend;

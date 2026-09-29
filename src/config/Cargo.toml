@@ -8,7 +8,7 @@ documentation.workspace = true
 
 
 [lib]
-name = "mate_config"
+name = "wasmq_config"
 path = "src/lib.rs"
 
 [dependencies]

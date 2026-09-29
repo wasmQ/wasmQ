@@ -3,8 +3,8 @@ use std::path::PathBuf;
 use anyhow::Result;
 use clap::Parser;
 
-use mate_config::Config;
-use mate_ipc::protocol::ProcessType;
+use wasmq_config::Config;
+use wasmq_ipc::protocol::ProcessType;
 use tracing::debug;
 
 use crate::process::scheduler::SchedulerProcess;

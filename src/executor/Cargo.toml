@@ -7,7 +7,7 @@ description.workspace = true
 documentation.workspace = true
 
 [lib]
-name = "mate_executor"
+name = "wasmq_executor"
 path = "src/lib.rs"
 
 [dependencies]

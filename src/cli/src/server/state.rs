@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use mate_config::Config;
-use mate_repository::TaskRepository;
+use wasmq_config::Config;
+use wasmq_repository::TaskRepository;
 
 use crate::process::hub::Hub;
 

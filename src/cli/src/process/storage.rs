@@ -2,8 +2,8 @@ use std::path::PathBuf;
 
 use anyhow::Result;
 
-use mate_ipc::transport::Transport;
-use mate_storage::Storage;
+use wasmq_ipc::transport::Transport;
+use wasmq_storage::Storage;
 
 pub struct StorageProcess {
     storage: Storage,

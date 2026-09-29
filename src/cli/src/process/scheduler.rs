@@ -1,7 +1,7 @@
 use anyhow::Result;
 
-use mate_ipc::transport::Transport;
-use mate_scheduler::Scheduler;
+use wasmq_ipc::transport::Transport;
+use wasmq_scheduler::Scheduler;
 
 pub struct SchedulerProcess {
     scheduler: Scheduler,
