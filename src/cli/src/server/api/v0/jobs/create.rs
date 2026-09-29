@@ -5,8 +5,8 @@ use serde::Deserialize;
 use serde_json::Value;
 use wasmq::proto::task::TaskIdentifier;
 
-use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 use wasmq::proto::job::Job;
+use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 
 use crate::server::api::v0::ApiError;
 use crate::server::state::SharedServices;

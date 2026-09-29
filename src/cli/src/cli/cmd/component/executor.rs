@@ -3,9 +3,9 @@ use std::path::PathBuf;
 use anyhow::Result;
 use clap::Parser;
 
+use tracing::debug;
 use wasmq_config::Config;
 use wasmq_ipc::protocol::ProcessType;
-use tracing::debug;
 
 use crate::process::executor::ExecutorProcess;
 use crate::transport::make_transport;

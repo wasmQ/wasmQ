@@ -5,10 +5,10 @@ use std::sync::Arc;
 
 use anyhow::{Result, bail};
 
+use tracing::error;
 use wasmq_ipc::channel::IpcServer;
 use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 use wasmq_ipc::transport::Transport;
-use tracing::error;
 
 use crate::backend::Backend;
 use crate::backend::sqlite::SqliteBackend;
