@@ -3479,7 +3479,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "chrono",
@@ -3492,7 +3492,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-cli"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "axum",
@@ -3520,7 +3520,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-config"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "serde",
@@ -3529,7 +3529,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-executor"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "bytes",
@@ -3545,7 +3545,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-ipc"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3561,7 +3561,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-repository"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3574,7 +3574,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-scheduler"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "tokio",
@@ -3586,7 +3586,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-storage"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3603,7 +3603,7 @@ dependencies = [
 
 [[package]]
 name = "wasmq-task"
-version = "0.0.0-pre.2af0423"
+version = "0.0.0-pre.c6d0c47"
 dependencies = [
  "proc-macro2",
  "quote",
