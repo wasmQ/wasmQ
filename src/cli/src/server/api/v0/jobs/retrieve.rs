@@ -4,8 +4,8 @@ use axum::{Extension, Json};
 use serde::Deserialize;
 use ulid::Ulid;
 
-use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 use wasmq::proto::job::{Job, JobQuery, JobStatus};
+use wasmq_ipc::protocol::{Message, MessagePayload, ProcessType};
 
 use crate::server::api::v0::ApiError;
 use crate::server::state::SharedServices;
@@ -21,7 +21,7 @@ pub async fn handler(
     Query(query): Query<RetrieveJobsQuery>,
 ) -> Result<Json<Vec<Job>>, ApiError> {
     let msg = Message {
-        id: Ulid::new(),
+        id: Ulid::generate(),
         from: ProcessType::Hub,
         to: ProcessType::Storage,
         payload: MessagePayload::QueryJobs(JobQuery {

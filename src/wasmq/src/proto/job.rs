@@ -52,7 +52,7 @@ impl Job {
         }
 
         Ok(Self {
-            id: Ulid::new(),
+            id: Ulid::generate(),
             name,
             args,
             status: JobStatus::Scheduled,

@@ -87,7 +87,6 @@ pub fn wasmq_handler(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
         mod bindings {
             wit_bindgen::generate!({
-                async: true,
                 inline: r"
                     package wasmq:runtime@0.1.0;
 

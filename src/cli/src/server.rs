@@ -5,8 +5,8 @@ use std::sync::Arc;
 
 use anyhow::Result;
 use axum::Router;
-use wasmq_repository::TaskRepository;
 use tokio::net::TcpListener;
+use wasmq_repository::TaskRepository;
 
 use wasmq_config::Config;
 
