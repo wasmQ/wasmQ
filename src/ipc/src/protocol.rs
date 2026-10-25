@@ -64,7 +64,7 @@ pub struct Message {
 impl Message {
     pub fn new(from: ProcessType, to: ProcessType, payload: MessagePayload) -> Self {
         Self {
-            id: Ulid::new(),
+            id: Ulid::generate(),
             from,
             to,
             payload,

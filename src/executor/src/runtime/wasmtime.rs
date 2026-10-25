@@ -5,9 +5,8 @@ use wasmtime::component::{Component, Linker};
 use wasmtime::{Config, Engine, Store};
 use wasmtime_wasi::p2::add_to_linker_async;
 use wasmtime_wasi::{ResourceTable, WasiCtx, WasiCtxView, WasiView};
-use wasmtime_wasi_http::WasiHttpCtx;
-use wasmtime_wasi_http::p2::{WasiHttpCtxView, WasiHttpView};
-use wasmtime_wasi_http::p2::{add_only_http_to_linker_async, default_hooks};
+use wasmtime_wasi_http::p2::add_only_http_to_linker_async;
+use wasmtime_wasi_http::{WasiHttpCtx, WasiHttpCtxView, WasiHttpView, default_hooks};
 
 const HANDLER_FUNC_FQN: &str = "handler";
 
@@ -54,7 +53,7 @@ impl WasmtimeRuntime {
             .wasm_component_model_async(true)
             .wasm_component_model(true)
             .wasm_component_model_async(true)
-            .wasm_component_model_async_builtins(true);
+            .wasm_component_model_more_async_builtins(true);
         let engine = Engine::new(&config)?;
         let mut linker = Linker::new(&engine);
 

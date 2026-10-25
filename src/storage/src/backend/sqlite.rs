@@ -164,7 +164,7 @@ impl super::Backend for SqliteBackend {
             sql.push_str(" ORDER BY scheduled_at LIMIT ?");
         }
 
-        let mut q = sqlx::query_as::<_, JobRecord>(&sql);
+        let mut q = sqlx::query_as::<_, JobRecord>(sqlx::AssertSqlSafe(sql));
 
         if let Some(status) = query.status {
             q = q.bind(status.to_string());
@@ -361,7 +361,7 @@ mod tests {
         let job = make_job();
         let stored = backend.create_job(job).await.expect("create_job");
 
-        let worker_id = format!("scheduler-executor0-{}", Ulid::new());
+        let worker_id = format!("scheduler-executor0-{}", Ulid::generate());
         let claimed = backend
             .claim_job(stored.id, worker_id.clone())
             .await

@@ -315,7 +315,7 @@ mod tests {
 
         // Send message from Hub to Storage
         let msg = Message {
-            id: Ulid::new(),
+            id: Ulid::generate(),
             from: ProcessType::Hub,
             to: ProcessType::Storage,
             payload: MessagePayload::Ping,
@@ -351,7 +351,7 @@ mod tests {
                     && matches!(request.payload, MessagePayload::Ping)
                 {
                     let response = Message {
-                        id: Ulid::new(),
+                        id: Ulid::generate(),
                         from: ProcessType::Storage,
                         to: request.from,
                         payload: MessagePayload::Pong,
@@ -364,7 +364,7 @@ mod tests {
 
         // Send request from transport1
         let request = Message {
-            id: Ulid::new(),
+            id: Ulid::generate(),
             from: ProcessType::Hub,
             to: ProcessType::Storage,
             payload: MessagePayload::Ping,

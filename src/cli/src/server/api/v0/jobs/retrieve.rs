@@ -21,7 +21,7 @@ pub async fn handler(
     Query(query): Query<RetrieveJobsQuery>,
 ) -> Result<Json<Vec<Job>>, ApiError> {
     let msg = Message {
-        id: Ulid::new(),
+        id: Ulid::generate(),
         from: ProcessType::Hub,
         to: ProcessType::Storage,
         payload: MessagePayload::QueryJobs(JobQuery {
